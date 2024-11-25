@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Application</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <div class="container">
+        <p class="title">Encryption and Decryption</p>
+
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" id="tab-file">Mã hóa & Gửi</button>
+                <button class="tab-button" id="tab-cryption">Mã hóa văn bản</button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Form 1: Mã hóa và Gửi -->
+                <div class="tab-pane active" id="tab1">
+                    <form id="file-form" enctype="multipart/form-data">
+                        <label for="file">Chọn tệp để mã hóa:</label>
+                        <input type="file" name="file" id="file" required>
+    
+                        <div class="key_cryption">
+                            <label>Khóa bảo mật: </label>
+                            <input type="password" value="" required name="key_string" placeholder="Nhập khóa bảo mật">   
+                        </div>
+    
+                        <label for="email">Email người nhận:</label>
+                        <input type="email" name="email" id="email" required placeholder="Nhập email người nhận">
+    
+                        <input type="text" disabled hidden value="" name="check">
+                        <div class="submit-form">
+                            <button type="submit">Mã hóa và Gửi</button>
+                            <button type="button" id="decrypt">Giải mã và Gửi</button>
+                        </div>
+                        
+                    </form>
+                </div>
+    
+                <!-- Form 2: Mã hóa văn bản -->
+                <div class="tab-pane" id="tab2">
+                    <form id="form-cryption">
+                        <div class="paragraph">
+                            <label>Enter text: </label>
+                            <textarea name="text" required id="text-paragraph" cols="50" rows="7"></textarea>
+                        </div>
+                        <div class="algorithm_action">
+                            <div class="block-algorithm">
+                                <label>Algorithm: </label>
+                                <select class="algorithm" name="algorithm">
+                                    <option value="AES">AES</option>
+                                    <option value="RSA">RSA</option>
+                                    <option value="SHA-256">SHA-256</option>
+                                </select>
+                            </div>
+                            <div class="block-action">
+                                <label>Action: </label>
+                                <select name="action">
+                                    <option value="encrypt">Encrypt</option>
+                                    <option value="decrypt">Decrypt</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="key_cryption">
+                            <label>Enter key cryption: </label>
+                            <input type="text" value="" required name="key_string">   
+                        </div>
+                        <button id="submit" class="btn-submit" type="submit">Submit</button>
+                    </form>
+
+                    <div class="block-result">
+                        <label>Result:</label>
+                        <p id="result"></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

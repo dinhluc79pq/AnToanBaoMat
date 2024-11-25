@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 95%;
+    max-width: 500px;
+    background-color: rgb(255, 253, 230);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    text-shadow: 1px 1px 1px #ffe200;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.paragraph textarea, .key_cryption input {
+    width: 98%;
+    padding: 5px;
+}
+
+.paragraph {
+    display: block;
+}
+
+.algorithm_action {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.algorithm_action select {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.block-algorithm, .block-action{
+    width: 47%;
+}
+
+.btn-submit {
+    background-color: #feff00;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.btn-submit:hover {
+    background-color: rgb(100, 237, 182);
+}
+
+.block-result p {
+    word-wrap: break-word; /* Cho phép từ dài tự động xuống dòng */
+    overflow-wrap: break-word; /* Đảm bảo từ dài không tràn ra ngoài */
+    white-space: normal; /* Chữ sẽ tự động xuống dòng */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    padding-top: 15px;
+}
+
+input[type="file"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 20px;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background-color: unset;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tab-button.active {
+    background-color: #63ffda;
+    color: black;
+}
+
+.tab-button:hover {
+    background-color: #63ffda;
+}
+
+/* Tab Content */
+.tab-content {
+    padding: 0 20px;
+    border: 1px solid #000000;
+    border-top: none;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+input[type="file"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.submit-form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.submit-form button {
+    width: 25%;
+}
